@@ -2,7 +2,7 @@
 ## 1. ¿Cómo hacer un respaldo de una máquina virtual? y ¿cómo levantar ese respaldo?
 Para realizar una copia de seguridad de una máquina virtual, primero se tiene que abrir Virtual box y dirigirse a la pestaña de "Archivo > Exportar" servicio virtualizado.
 
-![1.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+![1.1](https://github.com/Enrique290/Practica3.CompilacionDelKernelDeLinux/blob/main/P3/Imagen1.png)
 
 Posteriormente se selecciona la máquina virtual a respaldar.
 
