@@ -130,6 +130,8 @@ Para indicar a la computadora con que kernel se debe de iniciar se utilizan los 
 
 ![10.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
 
+Otro método es haciendo boot con el kernel de Linux, para hacer esto al momento de arrancar la maquina presionamos la tecla shift para entrar al menú de grub y nos metemos a opciones avanzadas y ahí elegimos el kernel para iniciar.
+
 ## 11. ¿Cómo verificar el cambio de kernel a partir de consola?
  
 Para verificar el cambio de kernel de manera sencilla simplemente aplicar le comando ***uname -a*** o ***uname -mrs*** en la terminal para ver que versión de kernel tenemos instalada y poder verificarla.
