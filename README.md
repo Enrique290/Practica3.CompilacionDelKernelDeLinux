@@ -124,12 +124,25 @@ Una vez llegado a este punto ya podremos instalar el kernel simplemente aplicand
 
 ## 10. ¿Cómo indicarle a la computadora con cuál kernel debe iniciar? 
 
+Para indicar a la computadora con que kernel se debe de iniciar se utilizan los comando ***sudo update-initramfs -c -k 5.10.13*** (este para indicarle cual kernel) y después ***sudo update -grub***
+
+![10.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+![10.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
 
 ## 11. ¿Cómo verificar el cambio de kernel a partir de consola?
  
+Para verificar el cambio de kernel de manera sencilla simplemente aplicar le comando ***uname -a*** o ***uname -mrs*** en la terminal para ver que versión de kernel tenemos instalada y poder verificarla.
 
+Como se puede ver esta imagen aplicamos el comando ***-uname a*** antes de reiniciar.
 
+![11.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
 
+Después aplicamos el comando ***sudo update-grub*** para que asuma el nuevo kernel y después se usa el comando ***shutdown -r now*** para reiniciar.
 
+![11.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
 
+Finalmente después de reiniciar aplicamos el comando ***uname -a*** nuevamente para verificar que ahora el kernel es el 5.10.13 y antes era el  5.8.0-50-generic.
+
+![11.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
 
