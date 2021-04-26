@@ -26,4 +26,8 @@ Al terminar el proceso de importación, se mostrará directamente en Virtual Box
 
 El Kernel en nomenclatura, se divide en 3 campos separados cada uno por un punto:
 
+* **Primer campo:** Se encuentra el número de la versión del Kernel.
+* **Segundo campo:** Se le conoce como sub-versión. Es una versión, dentro de la versión del primer campo. Si este número es par, la versión será estable; si es impar, ésta será inestable.
+* **Tercer campo:** Se refiere a la corrección de bugs y actualizaciones.
 
+![2.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
