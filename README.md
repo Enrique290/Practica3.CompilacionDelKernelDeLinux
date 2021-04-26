@@ -122,10 +122,10 @@ Una vez llegado a este punto ya podremos instalar el kernel simplemente aplicand
 
 ![9.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
 
+## 10. ¿Cómo indicarle a la computadora con cuál kernel debe iniciar? 
 
 
-
-
+## 11. ¿Cómo verificar el cambio de kernel a partir de consola?
 
 
 
