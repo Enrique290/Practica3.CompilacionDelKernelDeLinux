@@ -36,7 +36,11 @@ En la imagen presentada, se muestra que la versión de Kernel de Linux es la 5, 
 
 ## 3. Enlistar paquetes requeridos para la compilación y ¿cómo instalarlos desde terminal?
 
-Para la compilación se necesitan los paquetes de las dependencias los prerrequisitos y las fuentes.
+Para la compilación se necesitan los paquetes de:
+* Las dependencias 
+* Los prerrequisitos
+* Las fuentes 
+* Las librerías ncurses-dev libncurses-dev flex bc bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf.
 
 Primero abres la terminal y a partir de este punto tienes que seguir los puntos uno a uno e ir copiando los comandos en orden para poder instalar el kernel de manera efectiva.
 
@@ -127,8 +131,6 @@ Una vez llegado a este punto ya podremos instalar el kernel simplemente aplicand
 Para indicar a la computadora con que kernel se debe de iniciar se utilizan los comando ***sudo update-initramfs -c -k 5.10.13*** (este para indicarle cual kernel) y después ***sudo update -grub***
 
 ![10.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
-
-![10.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
 
 Otro método es haciendo boot con el kernel de Linux, para hacer esto al momento de arrancar la maquina presionamos la tecla shift para entrar al menú de grub y nos metemos a opciones avanzadas y ahí elegimos el kernel para iniciar.
 
