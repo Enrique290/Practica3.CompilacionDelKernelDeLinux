@@ -126,7 +126,7 @@ Una vez llegado a este punto ya podremos instalar el kernel simplemente aplicand
 
 
 ## 11. ¿Cómo verificar el cambio de kernel a partir de consola?
-
+ 
 
 
 
