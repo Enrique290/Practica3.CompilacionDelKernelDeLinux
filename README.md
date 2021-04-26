@@ -13,3 +13,17 @@ Después se selecciona el nombre del archivo de la copia de seguridad con extens
 ![1.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
 
 Una vez exportada la máquina virtual, se podrá ver un archivo .ova que contiene la máquina virtual con su configuración en la ubicación donde se guardó. Si se desea importar, se selecciona dicho archivo y se le da doble click, o en su defecto ir a virtual box y seleccionar "Archivo > Importar" servicio virtualizado para seleccionar el archivo deseado.
+
+![1.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+En la ventana de importar servicio virtualizado, se pueden seleccionar las preferencias deseadas para la máquina virtual que se importará. Finalmente se da click en “Importar”.
+
+![1.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+Al terminar el proceso de importación, se mostrará directamente en Virtual Box la máquina importada.
+
+## 2. Explicar la nomenclatura del kernel. 
+
+El Kernel en nomenclatura, se divide en 3 campos separados cada uno por un punto:
+
+
