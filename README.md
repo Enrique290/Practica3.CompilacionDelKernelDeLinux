@@ -22,7 +22,7 @@ En la ventana de importar servicio virtualizado, se pueden seleccionar las prefe
 
 Al terminar el proceso de importación, se mostrará directamente en Virtual Box la máquina importada.
 
-## 2. Explicar la nomenclatura del kernel. 
+## 2. Explicar la nomenclatura del kernel.
 
 El Kernel en nomenclatura, se divide en 3 campos separados cada uno por un punto:
 
@@ -31,3 +31,105 @@ El Kernel en nomenclatura, se divide en 3 campos separados cada uno por un punto
 * **Tercer campo:** Se refiere a la corrección de bugs y actualizaciones.
 
 ![2.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+En la imagen presentada, se muestra que la versión de Kernel de Linux es la 5, la sub-versión es la 8, y el ajuste de bugs y actualizaciones es la 0. El -43 hace referencia al número de parche en el que se encuentra. Sin embargo, la forma convencional es con los 3 números separados por un punto.
+
+## 3. Enlistar paquetes requeridos para la compilación y ¿cómo instalarlos desde terminal?
+
+Para la compilación se necesitan los paquetes de las dependencias los prerrequisitos y las fuentes.
+
+Primero abres la terminal y a partir de este punto tienes que seguir los puntos uno a uno e ir copiando los comandos en orden para poder instalar el kernel de manera efectiva.
+
+Para poder instalar los paquetes requeridos para la compilacion desde la terminal se aplica el comando ***sudo apt-get -y install build-essential libncurses-dev libncurses-dev flex bc bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf***
+
+![3.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+## 4. ¿Cómo descargar una versión de kernel desde terminal? 
+
+Las versiones de kernel pueden variar, pero en este tutorial se muestra como instalar la versión 5.10.13.
+
+Para descargar esta versión de kernel desde terminal se tiene que aplicar el comando.
+
+***wget "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.13.tar.xz"***
+
+![4.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+Esperamos que termine la descarga y ese comando nos deja un archivo comprimido del kernel.
+
+## 5. ¿Cómo extraer el código comprimido del kernel desde terminal?
+
+Una vez aplicado el paso 4 tendremos que extraer el código del kernel, para hacer esto se tiene que aplicar el comando tar avxf linux-5.10.13.tar.xz en la terminal.
+
+![5.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+## 6. ¿Cómo configurar el kernel?
+
+Una vez completado el paso 5 podremos configurar el kernel, para ello el primero paso es acceder al directorio de la versión de kernel que acabamos de descomprimir en el paso anterior, lo que se logra ejecutando el comando ***cd linux-5.10.13/*** en la terminal.
+
+![6.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+Estando ahí ya podremos acceder a configurar el kernel aplicando el comando ***make menuconfig***
+
+![6.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+Este comando nos desplegara un menú con colores.
+
+![6.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+En la configuración del kernel tendremos que guardar un archivo .config para poder compilar el código del kernel es importante no cambiar el nombre ni modificar nada simplemente basta con darle ok para guardar y después salir como se pueden ver en las siguientes imágenes.
+
+![6.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+![6.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+Una vez completando lo anterior le damos ***Exit*** para regresar a la terminal.
+
+![6.6](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+## 7. ¿Cómo compilar el código del kernel?
+
+En esta versión de kernel tenemos que hacer un pequeño cambio para poder compilar el código de kernel.
+
+Primero usamos el comando ***nano .config*** para acceder al archivo ***.config*** que guardamos en el punto anterior.
+
+![7.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+Una vez ahí tendremos que buscar la siguiente línea de código que dice **CONFIG_SYSTEM_TRUSTED_KEYS** y borrarla para poder compilar el código. (NOTA: esa línea de código se encuentra casi hasta el final de todo el código).
+
+![7.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+Una vez borrada la línea salimos del código y guardamos los cambios con ***ctrl+x*** y salimos para regresar a la terminal.
+
+Estando en la terminal solo basta con aplicar el comando ***make*** o mas recomendable el comando make -j (+Procesadores), ejemplo: ***make -j 3***, esto si se le asigno mas procesadores a la maquina virtual, pero si no se asignaron más procesadores se puede hacer perfectamente solo con el comando **make**.
+
+![7.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+Este paso puede tardar varias horas y es completamente normal ya que por eso es recomendable asignarle mas procesadores para poder hacer este paso un poco más rápido.
+
+## 8. ¿Cómo instalar módulos?
+
+Una vez terminado de compilar el kernel instalaremos los módulos, para esto primero hay que aplicar el comando ***make modules*** en la terminal pera verificar que todo este en orden.
+
+![8.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+Después de esto solo aplicamos el comando ***sudo make modules_install*** en la terminal para poder instalar los módulos.
+
+![8.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+## 9. ¿Cómo instalar el kernel?
+
+Una vez llegado a este punto ya podremos instalar el kernel simplemente aplicando el comando ***sudo make install*** en la terminal y con esto ya tendremos instalada la versión de kernel 5.10.13.
+
+![9.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
+
+
+
+
+
+
+
+
+
+
+
+
